@@ -1,0 +1,19 @@
+version: '2'
+services:
+  hello1:
+    build: ./hello1
+    container_name: hello1
+    ports:
+      - "8081:80"
+  hello2:
+    build: ./hello2
+    container_name: hello2
+    ports:
+      - "8082:80"
+  nginx:
+    build: ./nginx
+    ports:
+      - "8080:80"
+    depends_on:
+      - hello1
+      - hello2
