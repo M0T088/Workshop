@@ -9,3 +9,14 @@ Zusätzlich ist ein "Load Balancer" (./loadbalancing/nginx/config.conf) integrie
 Zum Thema Load Balancer googelt ihr am besten, falls ihr diesen Begriff nicht kennen solltet.
 
 Das Projekt könnt ihr über den Befehl "docker-compose up -d --build" starten.
+
+Generell weitere Befehle:
+
+- docker images:                                  Anzeige aller vorhandener Images
+- docker pull <IMAGE_TAG>:                        Herunterladen eines bestimmten Docker Images (eine Auswahl findet ihr unter https://hub.docker.com/search?type=image)
+- docker ps:                                      Anzeige aller laufenden Container
+- docker ps -a:                                   Anzeige aller existierenden Container
+- docker start <CONTAINER_NAME>/<CONTAINER_ID>:   Start eines bereits existierenden Docker Containers
+- docker stop <CONTAINER_NAME>/<CONTAINER_ID>:    Stoppen des laufenden Containers
+- docker rm <CONTAINER_NAME>/<CONTAINER_ID>:      Löschen eines vorhandenen Containers (hierzu muss der Container erst aber gestoppt sein)
+- docker-compose down:                            Beenden der docker-compose Instanz (muss innerhalb des Verzeichnisses der betreffenden docker-compose.yml geschehen)
