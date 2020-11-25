@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  tomcat1:
+    build: ./tomcat1
+    container_name: tomcat1
+    expose:
+      - 8080
+  tomcat2:
+    build: ./tomcat2
+    container_name: tomcat2
+    expose:
+      - 8080
+  nginxlb:
+    build: ./nginxlb
+    container_name: nginxlb
+    ports:
+      - "8080:8080"
+    depends_on:
+      - tomcat1
+      - tomcat2
